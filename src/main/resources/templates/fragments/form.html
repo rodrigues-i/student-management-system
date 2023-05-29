@@ -17,6 +17,7 @@
 				class="form-control"
 				placeholder="Enter Student First Name"
 				>
+				<p th:if="${#fields.hasErrors('firstName')}" th:errorclass="error" th:errors="*{firstName}"></p>
 			</div>
 			<div class="form-group">
 				<label>Student Last Name</label>
@@ -27,6 +28,7 @@
 				class="form-control"
 				placeholder="Enter Student Last Name"
 				>
+				<p th:if="${#fields.hasErrors('lastName')}" th:errorclass="error" th:errors="*{lastName}"></p>
 			</div>
 			<div class="form-group">
 				<label>Student Email</label>
@@ -37,6 +39,7 @@
 				class="form-control"
 				placeholder="Enter Student Email"
 				>
+				<p th:if="${#fields.hasErrors('email')}" th:errorclass="error" th:errors="*{email}"></p>
 			</div>
 			<div class="box-footer">
 				<button type="submit" class="btn btn-primary">Submit</button>
